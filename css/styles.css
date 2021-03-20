@@ -103,6 +103,11 @@
         position: relative;
     }
     
+    .nav::after {
+        content: "";
+        opacity: 0;
+    }
+    
     .nav:hover::after {
         content: "";
         width: 100%;
@@ -112,6 +117,8 @@
         display: flex;
         position: absolute;
         margin-top: 29px;
+        opacity: 1;
+        transition: opacity 250ms linear;
     }
     
     .nav:focus::after {
@@ -123,6 +130,8 @@
         display: flex;
         position: absolute;
         margin-top: 29px;
+        opacity: 1;
+        transition: opacity 250ms linear;
     }
     
     .menu-left-side:not(:last-child) {
@@ -164,6 +173,7 @@
     .upper-contacts:focus {
         color: var(--acent-color);
         fill: var(--acent-color);
+        transition: color 250ms linear, fill 250ms linear;
     }
     
     .upper-contacts {
@@ -244,10 +254,9 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         border: 0px;
+        transition: background-color 50ms linear;
     }
     /* --- features --- */
-    
-    .features-icon {}
     
     .feature-icon-wrap {
         background-color: #F5F4FA;
@@ -373,6 +382,7 @@
         background-color: var(--acent-color);
         fill: var(--white-font);
         cursor: pointer;
+        transition: background-color 250ms linear, fill 250ms linear;
     }
     
     .team-section {
@@ -446,6 +456,7 @@
         border: 1px solid var(--acent-color);
         cursor: pointer;
         fill: var(--acent-color);
+        transition: border 250ms linear, fill 250ms linear;
     }
     
     .clients-list-link {
@@ -468,6 +479,7 @@
     .client-icon:focus {
         fill: var(--acent-color);
         cursor: pointer;
+        transition: fill 250ms linear;
     }
     /* --- footer --- */
     
@@ -514,6 +526,7 @@
     .address:hover,
     .bottom-contacts:hover {
         color: var(--acent-color);
+        transition: color 250ms linear;
     }
     
     .side-footer {
@@ -598,6 +611,7 @@
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
         border-radius: 4px;
         border: 0px;
+        transition: color 300ms linear, background-color 250ms linear;
     }
     /* карточка */
     
@@ -624,6 +638,7 @@
     .por-card:hover .overlay-porcard,
     .por-card:focus .overlay-porcard {
         transform: translateY(0%);
+        transition: transform 300ms linear;
     }
     
     .card-capture {
@@ -665,8 +680,8 @@
         color: var(--white-font);
         padding-left: 24px;
         padding-right: 24px;
-        padding-top: 63px;
-        padding-bottom: 63px;
+        padding-top: 60px;
+        padding-bottom: 10px;
         font-size: 18px;
         line-height: 1.56;
         letter-spacing: 0.03em;
